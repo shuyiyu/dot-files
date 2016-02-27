@@ -8,4 +8,7 @@ then
 elif [ -w ~/.bash_profile ]
 then
     echo -e $srcdot >> ~/.bash_profile
+else
+    echo "no ~/.bashrc or ~/.bash_profile found"
 fi
+
