@@ -121,6 +121,11 @@ alias g++g='g++ -g -Wall'
 alias clangg='clang -g -Wall'
 alias clang++g='clang++ -g -Wall'
 
+sfw() {
+	PS1='\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+	PS2='> '
+}
+
 if [ -f ~/.bash_local ]; then
     . ~/.bash_local
 fi
