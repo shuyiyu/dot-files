@@ -21,6 +21,16 @@ ERR="\[\033[40;0;31m\]D==\[\033[40;1;36m\]8\[\033[40;0;31m\]<"
 export PS1="$BASE \$(if [[ \$? != 0 ]]; then echo '$ERR'; else echo '$NERR'; fi) $CLEAR"
 export PS2="\[\033[40;0;34m\]8==D \[\033[0m\]"
 
+sfw() {
+	PS1='\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+	PS2='> '
+}
+
+nsfw() {
+    PS1="$BASE \$(if [[ \$? != 0 ]]; then echo '$ERR'; else echo '$NERR'; fi) $CLEAR"
+    PS2="\[\033[40;0;34m\]8==D \[\033[0m\]"
+}
+
 # show "[hh:mm] user@host:pwd" in xterm title bar
 if [ "$TERM_PROGRAM" = "Apple_Terminal" ]; then
 	# for Mac Terminal, omit "User@Users-MacBook-Air"
@@ -120,11 +130,6 @@ alias gccg='gcc -g -Wall'
 alias g++g='g++ -g -Wall'
 alias clangg='clang -g -Wall'
 alias clang++g='clang++ -g -Wall'
-
-sfw() {
-	PS1='\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-	PS2='> '
-}
 
 if [ -f ~/.bash_local ]; then
     . ~/.bash_local

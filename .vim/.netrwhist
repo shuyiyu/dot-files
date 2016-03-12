@@ -1,11 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/Users/doe/.continuum'
-let g:netrw_dirhist_2='/Users/doe/.spyder2'
-let g:netrw_dirhist_3='/Users/doe/tnwHackBattle/concept-insights-nodejs-master/public/js'
-let g:netrw_dirhist_4='/Users/doe/tnwHackBattle/node-sdk-master/lib'
-let g:netrw_dirhist_5='/Users/doe/projects/Glasnost/timestamp/verification'
-let g:netrw_dirhist_6='/Users/doe/projects/wroot/.git'
-let g:netrw_dirhist_7='/Users/doe/projects/wroot/config'
-let g:netrw_dirhist_8='/Users/doe/projects/wroot'
-let g:netrw_dirhist_9='/Volumes/Tom/User Data/doe/Desktop'
+let g:netrw_dirhist_cnt =0
