@@ -21,7 +21,7 @@ syntax enable
 " 1 tab = 4 spaces
 set expandtab
 set shiftwidth=4
-set tabstop=5
+set tabstop=8
 set softtabstop=4
 inoremap <S-Tab> <C-V><Tab>
 

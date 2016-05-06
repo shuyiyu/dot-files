@@ -50,10 +50,7 @@ else
 fi
 unset show_what_in_title_bar
 
-alias modbash=modbashfunc
-alias srcbash=srcbashfunc
-
-modbashfunc() {
+modbash() {
 	if [ $# -gt 0 ]
 	then
 		vim ~/.bash_$1
@@ -74,7 +71,7 @@ modbashfunc() {
 	fi	
 }
 
-srcbashfunc() {
+srcbash() {
 	if [ -e ~/.bashrc ]
 	then
 		source ~/.bashrc
@@ -134,3 +131,6 @@ alias clang++g='clang++ -g -Wall'
 if [ -f ~/.bash_local ]; then
     . ~/.bash_local
 fi
+
+export GOPATH=$HOME/gopath
+export PATH=$GOPATH:$GOPATH/bin:$PATH
