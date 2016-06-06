@@ -1,6 +1,6 @@
 #!/bin/bash
 
-srcdot='if [ -f ~/.bash_local ]; then\n    . ~/.bash_local\nfi'
+srcdot='if [ -f ~/.bash_aliases ]; then\n    . ~/.bash_aliases\nfi'
 
 if [ -w ~/.bashrc ]
 then

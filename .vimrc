@@ -89,3 +89,6 @@ let g:limelight_priority = -1
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
 :map <F4> :Goyo<CR>
+
+" allow backspacing over everything in insert mode
+set backspace=indent,eol,start
