@@ -18,12 +18,19 @@ BASE="$GRAY[$RED\u$YELLOW@$BLUE\h:$YELLOW\W$GRAY]"
 NERR="\[\033[40;0;33m\]8==D\[\033[40;1;36m\]~"
 ERR="\[\033[40;0;31m\]D==\[\033[40;1;36m\]8\[\033[40;0;31m\]<"
 
+SFW_NERR='\[\033[40;0;33m\]$'
+SFW_ERR='\[\033[40;0;31m\]D:'
+
 export PS1="$BASE \$(if [[ \$? != 0 ]]; then echo '$ERR'; else echo '$NERR'; fi) $CLEAR"
 export PS2="\[\033[40;0;34m\]8==D \[\033[0m\]"
 
-sfw() {
+basic() {
 	PS1='\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 	PS2='> '
+}
+sfw() {
+    PS1="$BASE \$(if [[ \$? != 0 ]]; then echo '$SFW_ERR'; else echo '$SFW_NERR'; fi) $CLEAR"
+    PS2="\[\033[40;0;34m\]8==D \[\033[0m\]"
 }
 
 nsfw() {
