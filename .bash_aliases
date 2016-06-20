@@ -59,43 +59,34 @@ unset show_what_in_title_bar
 
 modbash() {
 	if [ $# -gt 0 ]
-	then
-		vim ~/.bash_$1
+            then vim ~/.bash_$1
 	elif [ -w ~/.bash_local ]
-	then
-		vim ~/.bash_local
+            then vim ~/.bash_local
 	elif [ -w ~/.bash_aliases ]
-	then 
-		vim ~/.bash_aliases
-	elif [ -w ~/.bashrc ]
-	then
-		vim ~/.bashrc
-	elif [ -w ~/.bash_profile ]
-	then
-		vim ~/.bash_profile
-	else
-		echo 'No ~/.bashrc_aliases ~/.bashrc, or ~/.bash_profile found.'
+            then vim ~/.bash_aliases
+        elif [ -w ~/.bashrc ]
+            then vim ~/.bashrc
+        elif [ -w ~/.bash_profile ]
+            then vim ~/.bash_profile
+            else echo 'No ~/.bashrc_aliases ~/.bashrc, or ~/.bash_profile found.'
 	fi	
 }
 
 srcbash() {
 	if [ -e ~/.bashrc ]
-	then
-		source ~/.bashrc
+            then source ~/.bashrc
 	elif [ -e ~/.bash_profile ]
-	then
-		source ~/.bash_profile
-	else
-		echo 'No ~/.bashrc or ~/.bash_profile found.'
+            then source ~/.bash_profile
+            else echo 'No ~/.bashrc or ~/.bash_profile found.'
 	fi
 }
 
 # force mv, rm and cp to ask user before clobbering file
-alias mv='mv -iv $*'
-alias rm='rm -vr $*'
-alias cp='cp -ivr $*'
+alias mv='mv -iv'
+alias rm='rm -vr'
+alias cp='cp -ivr'
 alias mkdir='mkdir -pv'
-alias remove='sudo rm -fvr $*'
+alias remove='sudo rm -fvr'
 
 # some more ls aliases
 case "$OSTYPE" in
@@ -117,7 +108,7 @@ alias cd..='cd ..'
 alias ..='cd ..'
 
 # git
-alias gitdif='git diff --color'
+alias gitdiff='git diff --color'
 alias gitmod='git add -u'
 
 # valgrind
