@@ -1,7 +1,4 @@
 export EDITOR=vim
-if [ -f ~/.bash_local ]; then
-    . ~/.bash_local
-fi
 
 case "$OSTYPE" in
 *linux*)
@@ -98,3 +95,6 @@ srcbash() {
 	fi
 }
 
+if [ -f ~/.bash_local ]; then
+    . ~/.bash_local
+fi
