@@ -25,7 +25,6 @@ alias fgrep="fgrep --color=auto"
 
 alias gitbr="git branch | grep '*' | tr -d '* '"
 
-
 [ -z "$PS1" ] && return
 # color prompt
 GREEN="\[\033[40;0;32m\]"
