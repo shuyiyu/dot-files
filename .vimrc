@@ -20,9 +20,9 @@ syntax enable
 " Use spaces instead of tabs
 " 1 tab = 4 spaces
 set expandtab
-set shiftwidth=4
+set shiftwidth=8
 set tabstop=8
-set softtabstop=4
+set softtabstop=8
 inoremap <S-Tab> <C-V><Tab>
 
 " Use smart tabs
@@ -92,3 +92,7 @@ autocmd! User GoyoLeave Limelight!
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
+:map ,t :!clear; make test<CR>
+:map ,m :!clear; make<CR>
+:map ,c :!clear; make clean<CR>
+:map ,a :!clear; make all<CR>
