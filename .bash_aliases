@@ -1,7 +1,4 @@
 export EDITOR=vim
-if [ -f ~/.bash_local ]; then
-    . ~/.bash_local
-fi
 
 case "$OSTYPE" in
 *linux*)
@@ -39,7 +36,6 @@ alias egrep="egrep --color=auto"
 alias fgrep="fgrep --color=auto"
 
 alias gitbr="git branch | grep '*' | tr -d '* '"
-
 
 [ -z "$PS1" ] && return
 # color prompt
@@ -110,3 +106,6 @@ srcbash() {
 	fi
 }
 
+if [ -f ~/.bash_local ]; then
+    . ~/.bash_local
+fi
