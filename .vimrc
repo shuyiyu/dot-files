@@ -92,7 +92,8 @@ autocmd! User GoyoLeave Limelight!
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
-:map ,t :!clear; make test<CR>
-:map ,m :!clear; make<CR>
-:map ,c :!clear; make clean<CR>
-:map ,a :!clear; make all<CR>
+:map ,m :!echo; echo '*** make ***'; echo; make<CR>
+:map ,t :!echo; echo '*** make test ***'; echo; make test<CR>
+:map ,r :!echo; echo '*** make run ***'; echo; make run<CR>
+:map ,c :!echo; echo '*** make clean ***'; echo; make clean<CR>
+:map ,a :!echo; echo '*** make all ***'; echo; make all<CR>
