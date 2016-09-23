@@ -88,12 +88,15 @@ let g:limelight_priority = -1
 
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
-:map <F4> :Goyo<CR>
+map <F4> :Goyo<CR>
+
+let vim_markdown_preview_toggle=1
+let vim_markdown_preview_browser='Safari'
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
-:map ,m :!echo; echo '*** make ***'; echo; make<CR>
-:map ,t :!echo; echo '*** make test ***'; echo; make test<CR>
-:map ,r :!echo; echo '*** make run ***'; echo; make run<CR>
-:map ,c :!echo; echo '*** make clean ***'; echo; make clean<CR>
-:map ,a :!echo; echo '*** make all ***'; echo; make all<CR>
+map ,m :!echo; echo '*** make ***'; echo; make<CR>
+map ,t :!echo; echo '*** make test ***'; echo; make test<CR>
+map ,r :!echo; echo '*** make run ***'; echo; make run<CR>
+map ,c :!echo; echo '*** make clean ***'; echo; make clean<CR>
+map ,a :!echo; echo '*** make all ***'; echo; make all<CR>
