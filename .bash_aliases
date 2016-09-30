@@ -34,6 +34,7 @@ alias l='ls -CF'
 
 alias cd..='cd ..'
 alias ..='cd ..'
+alias ...='cd ../../'
 
 alias usage='du -h -d1'
 
@@ -43,6 +44,17 @@ alias egrep="egrep --color=auto"
 alias fgrep="fgrep --color=auto"
 
 alias gitbr="git branch | grep '*' | tr -d '* '"
+
+function backup() 
+{
+        mv $1{,.backup}
+}
+
+function restore()
+{
+        mv ${1%*.backup}{.backup,}
+}
+
 
 [ -z "$PS1" ] && return
 # color prompt
@@ -113,6 +125,8 @@ srcbash() {
             else echo 'No ~/.bashrc or ~/.bash_profile found.'
 	fi
 }
+
+alias :w="echo You\'re not in vim, doofus."
 
 if [ -f ~/.bash_local ]; then
     . ~/.bash_local
