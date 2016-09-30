@@ -1,5 +1,8 @@
 export EDITOR=vim
 
+alias sudo="sudo "
+alias json="python -m json.tool"
+
 case "$OSTYPE" in
 *linux*)
 	alias dmesg='dmesg --color'
@@ -10,6 +13,8 @@ case "$OSTYPE" in
 	alias ls='ls -G'
 	;;
 esac
+
+which say &> /dev/null && alias talk='cat - | while read cat; do say $cat; done'
 
 man() {
     env \
@@ -29,6 +34,8 @@ alias l='ls -CF'
 
 alias cd..='cd ..'
 alias ..='cd ..'
+
+alias usage='du -h -d1'
 
 # grep color
 alias grep="grep --color=auto"

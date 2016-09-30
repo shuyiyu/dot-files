@@ -90,6 +90,8 @@ autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
 map <F4> :Goyo<CR>
 
+
+let vim_markdown_preview_github=1
 let vim_markdown_preview_toggle=1
 let vim_markdown_preview_browser='Safari'
 
