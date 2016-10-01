@@ -1,6 +1,6 @@
 export EDITOR=vim
 
-alias sudo="sudo "
+alias sudo='sudo '
 alias json="python -m json.tool"
 
 case "$OSTYPE" in
@@ -127,6 +127,7 @@ srcbash() {
 }
 
 alias :w="echo You\'re not in vim, doofus."
+alias fuck="sudo !!"
 
 if [ -f ~/.bash_local ]; then
     . ~/.bash_local
