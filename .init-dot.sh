@@ -42,13 +42,3 @@ else
     esac
 fi
 )
-
-if [ ! -d ~/.tmux/plugins/tpm ]
-then
-    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-fi
-
-if [ ! -d ~/.vim/bundle/nerdcommenter ]
-then
-        git clone https://github.com/scrooloose/nerdcommenter ~/.vim/bundle/nerdcommenter
-fi
