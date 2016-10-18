@@ -43,7 +43,7 @@ alias grep="grep --color=auto"
 alias egrep="egrep --color=auto"
 alias fgrep="fgrep --color=auto"
 
-alias gitbr="git branch | grep '*' | tr -d '* '"
+alias gitbr="git rev-parse --abbrev-ref HEAD"
 
 function backup() 
 {
