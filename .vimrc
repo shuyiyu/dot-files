@@ -19,7 +19,7 @@ syntax enable
 
 " Use spaces instead of tabs
 " 1 tab = 4 spaces
-set expandtab
+set noexpandtab
 set shiftwidth=8
 set tabstop=8
 set softtabstop=8
@@ -90,8 +90,9 @@ autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
 map <F4> :Goyo<CR>
 
-
 let vim_markdown_preview_github=1
+map <F12> :set colorcolumn=81<CR>
+
 let vim_markdown_preview_toggle=1
 let vim_markdown_preview_browser='Safari'
 
