@@ -1,5 +1,8 @@
 export EDITOR=vim
 
+alias sudo='sudo '
+alias json="python -m json.tool"
+
 case "$OSTYPE" in
 *linux*)
 	alias dmesg='dmesg --color'
@@ -10,6 +13,8 @@ case "$OSTYPE" in
 	alias ls='ls -G'
 	;;
 esac
+
+which say &> /dev/null && alias talk='cat - | while read cat; do say $cat; done'
 
 man() {
     env \
@@ -29,13 +34,27 @@ alias l='ls -CF'
 
 alias cd..='cd ..'
 alias ..='cd ..'
+alias ...='cd ../../'
+
+alias usage='du -h -d1'
 
 # grep color
 alias grep="grep --color=auto"
 alias egrep="egrep --color=auto"
 alias fgrep="fgrep --color=auto"
 
-alias gitbr="git branch | grep '*' | tr -d '* '"
+alias gitbr="git rev-parse --abbrev-ref HEAD"
+
+function backup() 
+{
+        mv $1{,.backup}
+}
+
+function restore()
+{
+        mv ${1%*.backup}{.backup,}
+}
+
 
 [ -z "$PS1" ] && return
 # color prompt
@@ -106,6 +125,9 @@ srcbash() {
             else echo 'No ~/.bashrc or ~/.bash_profile found.'
 	fi
 }
+
+alias :w="echo You\'re not in vim, doofus."
+alias fuck="sudo !!"
 
 if [ -f ~/.bash_local ]; then
     . ~/.bash_local
