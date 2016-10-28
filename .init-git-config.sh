@@ -15,3 +15,7 @@ git config --global alias.up '!git pull --rebase --prune $@ && git submodule upd
 
 git config --global alias.undo 'reset HEAD~1 --mixed'
 git config --global alias.amend 'commit -a --amend'
+git config --global alias.this 'rev-parse --abbrev-ref HEAD'
+
+git config --global alias.dw 'diff --word-diff'
+git config --global alias.dc 'diff --cached'
