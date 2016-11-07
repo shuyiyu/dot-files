@@ -19,3 +19,6 @@ git config --global alias.this 'rev-parse --abbrev-ref HEAD'
 
 git config --global alias.dw 'diff --word-diff'
 git config --global alias.dc 'diff --cached'
+git config --global alias.root 'rev-parse --show-toplevel'
+git config --global alias.conf 'config --global -e'
+
