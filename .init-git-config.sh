@@ -9,7 +9,7 @@ git config --global alias.unstage 'reset HEAD --'
 git config --global alias.last 'log -l HEAD'
 git config --global alias.visual '!gitk'
 
-git config --global alias.am 'commit -am'
+git config --global alias.cm '!git add -u && git commit -m'
 
 git config --global alias.up '!git pull --rebase --prune $@ && git submodule update --init --recursive'
 
